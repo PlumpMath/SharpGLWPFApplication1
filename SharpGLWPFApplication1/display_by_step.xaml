@@ -1,0 +1,26 @@
+﻿<Window x:Class="SharpGLWPFApplication1.display_by_step"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="display_by_step" Height="300" Width="300"
+        xmlns:sharpGL="clr-namespace:SharpGL.WPF;assembly=SharpGL.WPF">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="600"/>
+        </Grid.RowDefinitions>
+        <TextBlock HorizontalAlignment ="Stretch" 
+                   Text="" 
+                    Name="myTextBlock" 
+                    Grid.Row="0"
+                    Grid.Column="0"               
+         />
+        <sharpGL:OpenGLControl 
+                Name="myGLCon" OpenGLDraw="myGLCon_OpenGLDraw" 
+                Grid.Row="1"
+                Grid.Column="0"
+                OpenGLInitialized="myGLCon_OpenGLInitialized" Resized="myGLControl_Resized"
+                VerticalAlignment="Stretch"
+                DrawFPS="True" RenderContextType="FBO" FrameRate="20"
+             />
+    </Grid>
+</Window>

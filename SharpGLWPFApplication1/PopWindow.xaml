@@ -1,0 +1,8 @@
+﻿<Window x:Class="SharpGLWPFApplication1.PopWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="PopWindow" Height="300" Width="300">
+    <Grid Name="grid">
+        <DataGrid x:Name="dataGrid" AutoGenerateColumns="True" Grid.Row="1" ColumnWidth="100"/>
+    </Grid>
+</Window>
